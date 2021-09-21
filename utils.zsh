@@ -29,4 +29,8 @@ function dl_playlist() {
 }
 
 
-
+function activate() {
+    source venv/bin/activate 2>/dev/null || 
+    source ../venv/bin/activate 2>/dev/null || 
+    source ../../venv/bin/activate
+}
