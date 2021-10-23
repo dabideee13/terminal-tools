@@ -38,6 +38,12 @@ class Explorer:
     def _run(self, command: str) -> None:
         subprocess.Popen(command.split(), stdout=subprocess.PIPE)
 
+    def get_file_extension(self) -> str:
+        return self._file_extension
+
+    def get_playground_path(self) -> str:
+        return self._playground_path
+
 
 if __name__ == '__main__':
 
@@ -47,3 +53,4 @@ if __name__ == '__main__':
 
     explore = Explorer(args.TYPE)
     explore.explore()
+
